@@ -24,6 +24,8 @@ After reboot check if CUDA 10 is installed properly by:
 ```
 nvcc --version
 ```
-
-
-
+## Install CuDNN:
+```
+sudo dpkg -i libcudnn7_7.4.1.5-1+cuda10.0_amd64.deb
+sudo dpkg -i libcudnn7-dev_7.4.1.5-1+cuda10.0_amd64.deb
+```
