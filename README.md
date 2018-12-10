@@ -1,22 +1,23 @@
-# CUDA-9-Installation-on-Ubuntu-16.04-Guide
-CUDA 9 Installation on Ubuntu 16.04 Guide
+# CUDA 10 Installation Guide on Ubuntu 18.04
 
-## Install Third-party Libraries:
+## Install GPU Driver:
 ```
-sudo apt-get install g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev
+sudo add-apt-repository ppa:graphics-drivers/ppa
+sudo apt install nvidia-driver-415
+reboot
 ```
-
-## Quit X Server
+After reboot check if the driver is installed properly by:
 ```
-CTRL + ALT + F1
-sudo service lightdm stop
-sudo init 3
+nvidia-smi
 ```
 
-## Install CUDA 9 using runfile:
+## Install CUDA 10 using runfile:
 ```
-chmod +x ./your-nvidia-file.run
-sudo ./cuda
+chmod +x ./cuda_10.0.130_410.48_linux.run
+./cuda_10.0.130_410.48_linux.run --extract=$HOME
+~/.cuda-linux.10.0.130-24817639.run
+echo 'export CUDA_HOME=/usr/local/cuda' > ~/.bashrc
+echo 'export PATH=/usr/local/cuda/bin:$PATH'
 ```
 
 
