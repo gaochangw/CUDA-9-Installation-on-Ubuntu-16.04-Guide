@@ -18,6 +18,12 @@ chmod +x ./cuda_10.0.130_410.48_linux.run
 ~/.cuda-linux.10.0.130-24817639.run
 echo 'export CUDA_HOME=/usr/local/cuda' > ~/.bashrc
 echo 'export PATH=/usr/local/cuda/bin:$PATH'
+reboot
 ```
+After reboot check if CUDA 10 is installed properly by:
+```
+nvcc --version
+```
+
 
 
