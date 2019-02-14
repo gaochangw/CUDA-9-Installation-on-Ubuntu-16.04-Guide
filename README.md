@@ -3,7 +3,8 @@
 ## Install GPU Driver:
 ```
 sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt install nvidia-driver-410
+sudo apt update
+sudo apt install nvidia-415
 reboot
 ```
 After reboot check if the driver is installed properly by:
